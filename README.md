@@ -1,11 +1,11 @@
 # E-Commerce Data Engineering Pipeline
 
-An end-to-end data engineering project that simulates a real-world multi-source e-commerce ecosystem with intentional data quality issues. The pipeline implements medallion architecture (Bronze/Silver/Gold) to transform messy operational data into analytics-ready insights, uncovering **$120K+ in hidden revenue opportunities**.
+An end-to-end data engineering project with a real-world multi-source e-commerce ecosystem with serious data quality issues. The pipeline implements medallion architecture (Bronze/Silver/Gold) to transform messy operational data into analytics-ready insights, uncovering **$120K+ in hidden revenue opportunities**. Read the full case study here. 
 
 ## Project Overview
 
 This project demonstrates enterprise-grade data engineering practices by:
-- Generating 13 interconnected tables with realistic data quality issues (12.6M rows, 2GB)
+- Using 13 interconnected tables with data quality issues (12.6M rows, 2GB)
 - Implementing medallion architecture for data transformation
 - Building star schema models for analytics
 - Identifying revenue leakage and operational inefficiencies
