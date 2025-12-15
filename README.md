@@ -5,7 +5,7 @@ An end-to-end data engineering project with a real-world multi-source e-commerce
 ## Project Overview
 
 This project demonstrates enterprise-grade data engineering practices by:
-- Using 13 interconnected tables with data quality issues (12.6M rows, 2GB)
+- Using 12 interconnected tables with data quality issues (12.6+M rows, 2+GB)
 - Implementing medallion architecture for data transformation
 - Building star schema models for analytics
 - Identifying revenue leakage and operational inefficiencies
