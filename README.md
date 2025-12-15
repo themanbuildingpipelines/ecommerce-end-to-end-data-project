@@ -1,5 +1,3 @@
-# ecommerce-end-to-end-data-project
-
 # E-Commerce Data Engineering Pipeline
 
 An end-to-end data engineering project that simulates a real-world multi-source e-commerce ecosystem with intentional data quality issues. The pipeline implements medallion architecture (Bronze/Silver/Gold) to transform messy operational data into analytics-ready insights, uncovering **$120K+ in hidden revenue opportunities**.
