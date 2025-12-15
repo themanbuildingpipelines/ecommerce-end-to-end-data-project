@@ -18,20 +18,18 @@ This project demonstrates enterprise-grade data engineering practices by:
 ## Tools and Technologies
 
 ### Core Data Stack
-- **Snowflake/BigQuery/PostgreSQL**: Cloud data warehouse (Bronze/Silver/Gold layers)
+- **Snowflake**: Cloud data warehouse (Bronze/Silver/Gold layers)
 - **dbt**: SQL-based transformation framework for data modeling and quality
   - [dbt Documentation](https://docs.getdbt.com/)
-- **Python**: Data generation and automation (Pandas, NumPy)
-- **Tableau/Looker/Power BI**: Business intelligence and dashboards
+- **Tableau**: Business intelligence and dashboards
 
 ### Supporting Technologies
 - **Great Expectations**: Data quality validation and profiling
-- **Airflow/Dagster** (optional): Orchestration for production pipelines
 - **Git**: Version control and collaboration
 - **SQL**: Primary transformation language
 
 ### Visualization & Documentation
-- **Mermaid**: Architecture diagrams
+- **Draw.io**: Architecture diagrams
 - **Markdown**: Technical documentation
 
 ---
