@@ -2,6 +2,8 @@
 
 An end-to-end data engineering project with a real-world multi-source e-commerce ecosystem with serious data quality issues. The pipeline implements medallion architecture (Bronze/Silver/Gold) to transform messy operational data into analytics-ready insights, uncovering **$120K+ in hidden revenue opportunities**. Read the full case study here. 
 
+<img width="1731" height="441" alt="Data Diagram (E-commerce)" src="https://github.com/user-attachments/assets/6337bf24-bbb6-4161-b76d-123441de1316" />
+
 ## Project Overview
 
 This project demonstrates enterprise-grade data engineering practices by:
