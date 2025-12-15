@@ -36,42 +36,6 @@ This project demonstrates enterprise-grade data engineering practices by:
 
 ---
 
-## Data Architecture
-
-### Medallion Architecture Layers
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│ BRONZE LAYER (Raw, Untouched)                               │
-├─────────────────────────────────────────────────────────────┤
-│ • 13 raw tables loaded from CSV files                       │
-│ • No transformations applied                                │
-│ • Metadata: load_timestamp, source_file, row_count         │
-│ • Preserves all data quality issues for auditability       │
-└─────────────────────────────────────────────────────────────┘
-                            ↓
-┌─────────────────────────────────────────────────────────────┐
-│ SILVER LAYER (Cleaned, Standardized)                        │
-├─────────────────────────────────────────────────────────────┤
-│ • Data type corrections (string prices → numeric)           │
-│ • Deduplication (customers, transactions)                   │
-│ • Standardization (categories, countries, statuses)         │
-│ • Date/time normalization                                   │
-│ • Referential integrity fixes                               │
-└─────────────────────────────────────────────────────────────┘
-                            ↓
-┌─────────────────────────────────────────────────────────────┐
-│ GOLD LAYER (Analytics-Ready, Star Schema)                   │
-├─────────────────────────────────────────────────────────────┤
-│ • Fact Tables: fact_orders, fact_payments, fact_sessions   │
-│ • Dimension Tables: dim_customer, dim_product, dim_date     │
-│ • Business metrics: revenue, CLV, return_rate, conversion   │
-│ • Slowly changing dimensions (SCD Type 2)                   │
-└─────────────────────────────────────────────────────────────┘
-```
-
----
-
 ## Data Sources (13 Tables)
 
 All data is **synthetically generated** to simulate real-world e-commerce operations:
