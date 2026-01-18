@@ -1,0 +1,26 @@
+select
+    nullif(trim(session_id), '') as session_id,
+    nullif(trim(session_token), '') as session_token,
+    nullif(trim(customer_id), '') as customer_id,
+    session_start,
+    session_end,
+    page_views,
+    time_on_site_seconds,
+    nullif(trim(device_type), '') as device_type,
+    nullif(trim(browser), '') as browser,
+    nullif(trim(operating_system), '') as operating_system,
+    nullif(trim(traffic_source), '') as traffic_source,
+    nullif(trim(utm_campaign), '') as utm_campaign,
+    nullif(trim(utm_medium), '') as utm_medium,
+    nullif(trim(utm_source), '') as utm_source,
+    nullif(trim(landing_page), '') as landing_page,
+    nullif(trim(exit_page), '') as exit_page,
+    nullif(trim(converted), '') as converted,
+    nullif(trim(order_id), '') as order_id,
+    nullif(trim(ip_address), '') as ip_address,
+    nullif(trim(country), '') as country,
+    logged_at,
+    load_timestamp,
+    source_file
+from {{ source('bronze', 'bronze_web_sessions') }}
+where session_id is not null
