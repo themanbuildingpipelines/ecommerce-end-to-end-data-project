@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: core_ad_spend_daily
+    description: "Cleaned ad spend daily table with normalization and data quality flags."
+
+    columns:
+      - name: campaign_id
+        tests:
+          - not_null
+
+      - name: spend_date
+        tests:
+          - not_null
+
+      - name: campaign_seq
+        description: "Stable numeric grouping for normalized campaign_name."
+        tests:
+          - not_null
+
+      - name: marketing_channel
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  [
+                    "Google Ads",
+                    "Facebook",
+                    "Instagram",
+                    "X (formerly Twitter)",
+                    "Display",
+                  ]
+
+      - name: campaign_name
+        tests:
+          - not_null
+
+      - name: impressions
+        tests:
+          - not_null
+
+      - name: clicks
+        tests:
+          - not_null
+
+      - name: cost_in_usd
+        tests:
+          - not_null
+
+      - name: dq_spend_before_creation
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
+
+      - name: dq_clicks_gt_impressions
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [0, 1]
